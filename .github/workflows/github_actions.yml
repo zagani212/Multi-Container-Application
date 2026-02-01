@@ -60,11 +60,8 @@ jobs:
             echo "${{secrets.SSH_PRIVATE_KEY}}" > key.pem
             chmod 400 key.pem
             scp -o StrictHostKeyChecking=no -i key.pem app/compose.yml ubuntu@51.44.12.30:/home/ubuntu/
-            rm -rf key.pm
-      - name: Copy Docker Compose file
+      - name: Copy Nginx config file
         run: |
-            echo "${{secrets.SSH_PRIVATE_KEY}}" > key.pem
-            chmod 400 key.pem
             scp -o StrictHostKeyChecking=no -i key.pem app/nginx.conf ubuntu@51.44.12.30:/home/ubuntu/
             rm -rf key.pm
       - name: Run docker compose
