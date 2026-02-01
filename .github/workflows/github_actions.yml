@@ -19,7 +19,7 @@ jobs:
   apply_ansible_playbook:
     runs-on: ubuntu-latest
     needs: paths-filter
-    if: needs.paths-filter.outputs.ansibleChanged == true
+    if: needs.paths-filter.outputs.ansibleChanged == 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -32,7 +32,7 @@ jobs:
   build_and_deploy_to_dockerHub:
     runs-on: ubuntu-latest
     needs: paths-filter
-    if: needs.paths-filter.outputs.appChanged == true
+    if: needs.paths-filter.outputs.appChanged == 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
