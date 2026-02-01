@@ -47,5 +47,5 @@ jobs:
           context: "{{defaultContext}}:app"
           push: true
           tags: | 
-            ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/app:${{github.ref}}
+            ${{ secrets.DOCKERHUB_USERNAME }}/multi-container-app:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/multi-container-app:${{github.sha}}
