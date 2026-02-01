@@ -11,6 +11,11 @@ mongoose
     .then(() => console.log("MongoDB connected"))
     .catch(err => console.error("Here is an error : ", err));
 
+
+app.get('/', async (req, res) => {
+    res.send('hello World, access to /tofos to interact with your todo lists');
+})
+
 /**
  * GET /todos — get all todos
  */
