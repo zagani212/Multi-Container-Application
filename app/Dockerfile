@@ -14,7 +14,6 @@ FROM node:20-alpine AS production
 # Create app directory
 WORKDIR /app
 
-
 # Create non-root user
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S nodejs -u 1001
