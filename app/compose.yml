@@ -8,6 +8,6 @@ services:
   mongo:
     image: "mongo:latest"
     volumes: 
-      - mongodb_volume:/data/db 
+      - mongodb_volume:/data/db
 volumes:
   mongodb_volume:
