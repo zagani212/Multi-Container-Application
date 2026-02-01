@@ -13,7 +13,7 @@ mongoose
 
 
 app.get('/', async (req, res) => {
-    res.send('hello World, access to /tofos to interact with your todo lists');
+    res.send('Hello World, access to /todos to interact with your todo lists');
 })
 
 /**
